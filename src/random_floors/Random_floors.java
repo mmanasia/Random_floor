@@ -20,15 +20,9 @@ public class Random_floors {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner in = new Scanner(System.in);
-        
+       
  
 String[] floors ={"1st floor", "2nd floor","3rd floor", "BH Buddy! Not your lucky day!"};
-//String s1 ="first floor";
-//String s2 = "second floor";
-//String s3 = "third floor";
-//String bh= "not your lucky day!";
-char next = 'n';
-char done = 'd';
 Random r = new Random();
 
 int length;
@@ -38,20 +32,38 @@ String[] techs = new String[length];
 
 for(int k = 0 ; k < length; k++)
 {
-    System.out.println ("Enter the name of Techs" + (k+1));
+    System.out.println ("Enter the name of Tech" + (k+1));
     techs[k] = in.next();
 }
 in.close();
-System.out.println("----------------------------------------------------------");
+System.out.println("--------------------------------------------------------");
+
+// assigning Techs
 for(int j=0; j<techs.length; j++){
-int randomPeople = r.nextInt(techs.length);
+//int randomPeople = r.nextInt(techs.length);
 System.out.println(techs[j]);
 
-for(int i=0; i<floors.length; i++ ){
+//assigning Floors
+for(int i=0; i<floors.length; i++ ){ 
 int randomNumber = r.nextInt(floors.length);
-System.out.println(floors[randomNumber]);
-System.out.println("----------------------------------------------------------");
-break;
+String[] pick = new String[floors.length];
+pick[i] = (floors[randomNumber]);
+//System.out.println(floors[randomNumber]);
+
+
+if(pick[i] == (floors[i]) ){
+ randomNumber = r.nextInt(floors.length);
+ pick[i] = (floors[randomNumber]);
+
+ System.out.println(pick[i]);
+}
+
+
+}
+        
+
+System.out.println("########################################################");
+
 
         
 };
@@ -59,5 +71,3 @@ break;
 
 
 }
-}
-
