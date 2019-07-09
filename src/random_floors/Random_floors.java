@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package random_floors;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random; 
 import java.util.HashSet;
 import java.util.Set;
@@ -39,35 +41,46 @@ in.close();
 System.out.println("--------------------------------------------------------");
 
 // assigning Techs
-for(int j=0; j<techs.length; j++){
-//int randomPeople = r.nextInt(techs.length);
-System.out.println(techs[j]);
+//for(int j=0; j<techs.length; j++){
+////int randomPeople = r.nextInt(techs.length);
+//System.out.println(techs[j]);
+//
+////assigning Floors
+//for(int i=0; i<floors.length; i++ ){
+//   int randomNumber = r.nextInt(floors.length);
+//   final Set<Integer> s = new HashSet<>();
+//   while(true)
+//   {
+//        String[] pick = new String[floors.length];
+//        pick = (floors[randomNumber] + 1);
+////System.out.println(floors[randomNumber]);
+//if(s.contains(s)== false){
+//    s.add(i);
+//    System.out.println(pick);
+//    break;
+    
 
-//assigning Floors
-for(int i=0; i<floors.length; i++ ){ 
+ //randomNumber = r.System.out.println(pick[i]);nextInt(floors.length);
+ ///pick[i] = (floors[randomNumber]);
+
 int randomNumber = r.nextInt(floors.length);
-String[] pick = new String[floors.length];
-pick[i] = (floors[randomNumber]);
-//System.out.println(floors[randomNumber]);
-
-
-if(pick[i] == (floors[i]) ){
- randomNumber = r.nextInt(floors.length);
- pick[i] = (floors[randomNumber]);
-
- System.out.println(pick[i]);
-}
+    final Set<Integer> s = new HashSet<>();
+for(int i = 0; i < 6; i++){
+                while(true) {
+                int pick = r.nextInt(6) + 1;
+                if (s.contains(pick) == false) {
+                    s.add(pick);
+                    System.out.println(pick);
+                    break;
 
 
 }
-        
+             
+}
+ 
+}
+}
 
-System.out.println("########################################################");
 
 
-        
 };
-};
-
-
-}
