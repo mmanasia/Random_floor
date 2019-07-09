@@ -41,10 +41,8 @@ in.close();
 System.out.println("--------------------------------------------------------");
 
 // assigning Techs
-//for(int j=0; j<techs.length; j++){
-////int randomPeople = r.nextInt(techs.length);
-//System.out.println(techs[j]);
-//
+for(int j=0; j<techs.length; j++){
+System.out.println(techs[j]);
 ////assigning Floors
 //for(int i=0; i<floors.length; i++ ){
 //   int randomNumber = r.nextInt(floors.length);
@@ -63,24 +61,16 @@ System.out.println("--------------------------------------------------------");
  //randomNumber = r.System.out.println(pick[i]);nextInt(floors.length);
  ///pick[i] = (floors[randomNumber]);
 
-int randomNumber = r.nextInt(floors.length);
-    final Set<Integer> s = new HashSet<>();
-for(int i = 0; i < 6; i++){
-                while(true) {
-                int pick = r.nextInt(6) + 1;
-                if (s.contains(pick) == false) {
-                    s.add(pick);
-                    System.out.println(pick);
-                    break;
-
-
-}
-             
-}
- 
+final Set<Integer> s = new HashSet<>();
+for(int i = 0; i < techs.length; i++){
+    while(true){
+    int pick = r.nextInt(techs.length) + 1;
+    if (s.contains(pick) == false){
+    s.add(pick);
+    System.out.println(floors[pick-1]);
+}break;
 }
 }
-
-
-
+}
+}
 };
