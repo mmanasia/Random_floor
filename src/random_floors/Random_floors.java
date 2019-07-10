@@ -67,10 +67,10 @@ System.out.println("--------------------------------------------------------");
 
 for(int i = 0; i < techs.length; i++){
                 while(true) {
-                int pick = r.nextInt(techs.length);
+                int pick = r.nextInt(techs.length +1 );
                 if (s.contains(pick) == false){
                     s.add(pick);
-                    System.out.println(techs[i] + " " + floors[pick]);
+                    System.out.println(techs[i] + " " + floors[pick - 1]);
                     break;
 
 
