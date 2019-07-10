@@ -40,47 +40,22 @@ for(int k = 0 ; k < length; k++)
 in.close();
 System.out.println("--------------------------------------------------------");
 
-// assigning Techs
-//for(int j=0; j<techs.length; j++){
-////int randomPeople = r.nextInt(techs.length);
-//System.out.println(techs[j]);
-//
-////assigning Floors
-//for(int i=0; i<floors.length; i++ ){
-//   int randomNumber = r.nextInt(floors.length);
-//   final Set<Integer> s = new HashSet<>();
-//   while(true)
-//   {
-//        String[] pick = new String[floors.length];
-//        pick = (floors[randomNumber] + 1);
-////System.out.println(floors[randomNumber]);
-//if(s.contains(s)== false){
-//    s.add(i);
-//    System.out.println(pick);
-//    break;
-    
 
- //randomNumber = r.System.out.println(pick[i]);nextInt(floors.length);
- ///pick[i] = (floors[randomNumber]);
-
-    final Set<Integer> s = new HashSet<>();
-
+final Set<Integer> s = new HashSet<>();
+final Set<Integer> t = new HashSet<>();
 for(int i = 0; i < techs.length; i++){
-                while(true) {
-                int pick = r.nextInt(techs.length +1 );
+                while(true){
+                int tec = r.nextInt(techs.length) + 1;
+                if (t.contains(tec) == false){
+                    t.add(tec);
+                    System.out.println(techs[tec - 1]);
+                }
+                int pick = r.nextInt(techs.length) + 1;
                 if (s.contains(pick) == false){
                     s.add(pick);
-                    System.out.println(techs[i] + " " + floors[pick - 1]);
-                    break;
-
-
+                    System.out.println(floors[pick - 1]);
+                }break;
+                }
+                }
 }
-             
-}
- 
-}
-}
-
-
-
 };
