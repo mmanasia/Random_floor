@@ -46,16 +46,22 @@ final Set<Integer> t = new HashSet<>();
 for(int i = 0; i < techs.length; i++){
                 while(true){
                 int tec = r.nextInt(techs.length) + 1;
+                do{
                 if (t.contains(tec) == false){
                     t.add(tec);
                     System.out.println(techs[tec - 1]);
                 }
-                int pick = r.nextInt(techs.length) + 1;
-                if (s.contains(pick) == false){
-                    s.add(pick);
-                    System.out.println(floors[pick - 1]);
-                }break;
+                else{
+                    tec = r.nextInt(techs.length) + 1;
                 }
-                }//hello
+                }while(t.contains(tec) == false);
+//                int pick = r.nextInt(techs.length) + 1;
+                
+//                if (s.contains(pick) == false){
+//                    s.add(pick);
+//                    System.out.println(floors[pick - 1]);
+                break;
+                }
 }
+}//hello
 };
