@@ -43,7 +43,7 @@ System.out.println("--------------------------------------------------------");
 
 final Set<Integer> s = new HashSet<>();
 final Set<Integer> t = new HashSet<>();
-for(int i = 0; i < techs.length; i++){
+for(int i = 0; i < techs.length + 2; i++){
                 while(true){
                 int tec = r.nextInt(techs.length) + 1;
                 do{
