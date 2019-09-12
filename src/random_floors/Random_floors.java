@@ -43,25 +43,36 @@ System.out.println("--------------------------------------------------------");
 
 final Set<Integer> s = new HashSet<>();
 final Set<Integer> t = new HashSet<>();
-for(int i = 0; i < techs.length + 4; i++){
+for(int i = 0; i < techs.length + 50; i++){
                 while(true){
                 int tec = r.nextInt(techs.length) + 1;
+                int pick = r.nextInt(floors.length) + 1;
                 do{
-                if (t.contains(tec) == false){
+                if (t.contains(tec) == false && s.contains(pick) == false){
                     t.add(tec);
-                    System.out.println(techs[tec - 1]);
+                    s.add(pick);
+                    System.out.println(techs[tec - 1] + " <--> " + floors[pick - 1]);
                 }
                 else{
                     tec = r.nextInt(techs.length) + 1;
+                    pick = r.nextInt(floors.length) + 1;
                 }
-                }while(t.contains(tec) == false);
-//                int pick = r.nextInt(techs.length) + 1;
-                
-//                if (s.contains(pick) == false){
+                }while(t.contains(tec) == false && s.contains(pick) == false);
+              break;
+//                int pick = r.nextInt(floors.length) + 1;
+//              do{
+//              if (s.contains(pick) == false){
+//                  while (true){
 //                    s.add(pick);
 //                    System.out.println(floors[pick - 1]);
-                break;
+//                }
+//                }
+//                else{
+//                    pick = r.nextInt(floors.length) + 1;
+//                }
+//                }while(s.contains(pick) == false);
+                
+                }
                 }
 }
-}//hello
-};
+}
